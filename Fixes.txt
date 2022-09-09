@@ -1,0 +1,11 @@
+Fixes for GBTO Website
+
+1. Navigation Bar Fixed - Status -> Executed
+2. Counters - Status -> Executed
+3. Animations Status -> Next Website Update
+4. Responsiveness for the carousel - Status -> Fixed
+5. Hover at Intro-section - Status -> Next Website Update
+6. Browsers Compatibility - Status -> Executed
+7. Select Country  Status -> Fixed Temporarily
+8. Errors - Status -> Executed
+9. investment section  - Status -> Executed

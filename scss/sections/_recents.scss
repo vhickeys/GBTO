@@ -1,0 +1,51 @@
+@use '../custom' as *;
+
+.recents {
+    background-color: $black;
+    padding: 0 4rem;
+
+    .rd-head {
+        h1 {
+            color: $white;
+            margin-bottom: 4rem;
+            font-weight: 600;
+            font-size: 3rem;
+        }
+    }
+
+    .table {
+        color: $yellow;
+        font-size: 1.6rem;
+        margin-bottom: 4rem;
+        margin-left: 21rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding: 2rem 0 0 0;
+
+        .rd-head {
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+
+        .table {
+            margin-left: 0;
+            font-size: 1.2rem;
+        }
+    }
+
+    @include media-breakpoint-between(md, lg) {
+        padding: 2rem 0 0 0;
+
+        .rd-head {
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+
+        .table {
+            margin-left: 0;
+        }
+    }
+}

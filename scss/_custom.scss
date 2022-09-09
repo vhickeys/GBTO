@@ -1,0 +1,97 @@
+
+// Theme Colors
+
+$yellow:  #f6e71d;
+$gold: #bba14f;
+$light-black: #181818;
+$black-yellow: #4d4b34;;
+$deep-yellow: #f5d10d;
+
+// Gray and White Colors
+
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #020202;
+
+$primary:       $black;
+$secondary:     $gold;
+
+// Import Bootstrap
+
+// Carousel Indicators
+
+$carousel-indicator-width:           10px;
+$carousel-indicator-height:          10px;
+$carousel-indicator-hit-area-height: 10px;
+$carousel-indicator-spacer:          3px;
+$carousel-indicator-opacity:         .5;
+$carousel-indicator-active-bg:       $white;
+$carousel-indicator-active-opacity:  1;
+$carousel-indicator-transition:      opacity .6s ease;
+$carousel-indicator-border-radius: 100%;
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+// Container Override
+
+.container-fluid {
+    padding: 1.5rem 3rem;
+
+    @include media-breakpoint-down(sm) {
+        padding: 0.8rem 1rem;
+    }
+}
+
+// Carousel Indicators Override
+
+.carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    
+    // Use the .carousel-control's width as margin so we don't overlay those
+    margin-right: $carousel-control-width;
+    margin-bottom: 1rem;
+    margin-left: $carousel-control-width;
+    list-style: none;
+  
+    [data-bs-target] {
+      box-sizing: content-box;
+      flex: 0 1 auto;
+      width: $carousel-indicator-width;
+      height: $carousel-indicator-height;
+      border-radius: $carousel-indicator-border-radius;
+      padding: 0;
+      margin-right: $carousel-indicator-spacer;
+      margin-left: $carousel-indicator-spacer;
+      text-indent: -999px;
+      cursor: pointer;
+      background-color: $carousel-indicator-active-bg;
+      background-clip: padding-box;
+      border: 0;
+      // Use transparent borders to increase the hit area by 10px on top and bottom.
+      border-top: $carousel-indicator-hit-area-height solid transparent;
+      border-bottom: $carousel-indicator-hit-area-height solid transparent;
+      opacity: $carousel-indicator-opacity;
+      @include transition($carousel-indicator-transition);
+    }
+  
+    .active {
+      opacity: $carousel-indicator-active-opacity;
+    }
+  }

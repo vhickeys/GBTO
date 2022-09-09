@@ -1,0 +1,36 @@
+@use '../custom' as *;
+
+.menu {
+    
+    .navbar-brand {
+        margin-left: -1.5rem;
+    }
+    
+    li {
+        padding: 0 3rem 0 0;
+
+        a {
+            font-size: 20px;
+            font-weight: bold;
+            color: $white !important;
+            transition: all 0.5s ease-in-out;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;  
+
+            @include media-breakpoint-down(sm) {
+                font-size: 16px;
+            }
+        }
+
+        a:hover {
+            color: $yellow !important;
+        }
+
+        a.active {
+            color: $yellow !important;
+        }
+    }
+    
+}

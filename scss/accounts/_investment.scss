@@ -1,0 +1,234 @@
+@use '../custom' as *;
+
+.invest {
+    padding: 10rem 0 3rem 0;
+    background: $black;
+
+    .alert {
+        font-size: 16px;
+        color: darken($color: $white, $amount: 10%);
+        background-color: $light-black;
+        border: none;
+        font-family: 'Tiro Gurmukhi', serif;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 14px;
+        }
+    }
+
+    .plans {
+        color: $white;
+
+        h2 {
+            text-transform: capitalize;
+            font-family: 'Tiro Gurmukhi', serif;
+            font-size: 3rem;
+        }
+    }
+
+    .card {
+        font-family: 'Tiro Gurmukhi', serif;
+        background-color: $light-black;
+
+        .card-header {
+            font-size: 24px;
+            color: darken($color: $white, $amount: 10%);
+            font-weight: bold;
+        }
+
+        .card-body {
+            font-size: 16px;
+            color: $white;
+            
+            p {
+                color: darken($color: $white, $amount: 25%);
+            }
+
+            @include media-breakpoint-down(sm) {
+                font-size: 14px;
+            }
+
+            .ref {
+                color: $yellow;
+            }
+        }
+
+    }
+
+    & .icon-box {
+        margin-top: 4rem;
+        width: 100%;
+        background: $light-black;
+        border-radius: 20px;
+        padding: 2rem 0;
+        font-family: 'Tiro Gurmukhi', serif;
+
+        .btc {
+            margin-bottom: 1rem;
+        }
+
+        .btc-content {
+            h6 {
+                font-size: 20px;
+                font-weight: bold;
+                color: $yellow;
+            }
+
+            p {
+                font-size: 16px;
+                color: $white;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                li {
+                    font-size: 16px;
+                    padding: 4px 0;
+                    color: darken($color: $white, $amount: 10%);
+
+                    i {
+                        color: $yellow;
+                        padding-right: 8px;
+                    }
+                }
+            }
+        }
+
+        .btc-input {
+
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+
+            p {
+                font-size: 16px;
+                color: darken($color: $white, $amount: 10%);
+            }
+
+            .input-group {
+                width: 100%;
+
+
+                #basic-addon2 {
+                    background-color: $yellow;
+                    color: $black;
+                    font-size: 16px;
+                    padding: 12px;
+                    margin-top: -1px;
+                    border: none;
+                }
+
+                input {
+                    font-size: 16px;
+                    color: darken($color: $white, $amount: 10%);
+                    border-radius: 0;
+                    border-color: darken($color: $white, $amount: 50%);
+                    box-shadow: none;
+                    padding: 10px 0 10px 15px;
+                    background: $black;
+                }
+
+                input:focus {
+                    border-color: $yellow;
+                }
+            }
+        }
+    }
+}
+
+.account-info {
+    padding: 4rem;
+    background-color: $black;
+    font-family: 'Tiro Gurmukhi', serif;
+    // background-position: center center;
+    // background-size: cover;
+    // background-attachment: fixed;
+    // background-repeat: no-repeat;
+    // position: relative;
+
+    @media (max-width: 575.98px) {
+        padding: 4rem 0;
+    }
+
+    // .wrapper {
+    //     position: relative;
+    // }
+    
+    h4 {
+        font-size: 24px;
+        font-weight: bold;
+        color: $white;
+    }
+
+    p {
+        color: $yellow;
+        font-size: 14px;
+    }
+
+    .bordered {
+        border: 1px solid $yellow;
+        border-radius: 10px;
+        padding: 3rem 0 2rem 0;
+        margin-bottom: 2rem;
+    }
+
+    .withdraw_button {
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    & .withdraw {
+        display: flex;
+        justify-content: center;
+
+        .input-group {
+            width: 90%;
+
+            @media (min-width: 767.98px) {
+                width: 40%;
+            }
+        }
+
+        input {
+            font-size: 16px;
+            border-radius: 10px;
+            border-color: none;
+            box-shadow: none;
+            background-color: $light-black;
+            color: darken($color: $white, $amount: 10%);
+            padding: 10px 0 10px 15px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+        }   
+
+        input:focus {
+            border-color: $yellow;
+        }
+
+        #button-addon2 {
+            color: $black;
+            background: $yellow;
+            border: none;
+            padding: 12px;
+
+            @media (max-width: 575.98px) {
+                padding: 1rem 2rem;
+            }
+        }
+
+        #button-addon2:hover {
+            background: darken($color: $white, $amount: 10%);
+            color: $black;
+        }
+    }
+
+    & .tier {
+        margin-top: 2rem;
+        color: $white;
+    }
+}

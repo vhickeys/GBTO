@@ -1,0 +1,22 @@
+@use '../custom' as *;
+
+.as-featured-on {
+    background-color: #cccccc;
+    padding: 5rem 0 0 0;
+
+    @include media-breakpoint-down(sm) {
+        padding: 2rem 0 0 0;
+    }
+
+    .afo-content {
+        p {
+            color: $light-black;
+            font-size: 1.7rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
